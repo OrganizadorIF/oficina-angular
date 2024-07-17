@@ -1,13 +1,24 @@
-<div class="card shadow">
-    <h2 class="card-header">My Char List</h2>
-    <div class="card-body">
-        <ul class="list-group" *ngFor="let char of CharsService.charList">
-            <b>ID:</b> {{char.id}} | <b>Nome:</b> {{char.name}} | <b>Cor favorita:</b> {{char.fav_color}} | <b>Número de armas:</b> {{char.weaponsNum}}.
-        </ul>
-    </div>
+<div class="card shadow custom-card">
+  <h2 class="card-header custom-card-header">Lista de Personagens</h2>
+  <div class="card-body custom-card-body">
+    <ul class="list-group" *ngFor="let char of CharsService.charList">
+      <li class="list-group-item custom-list-item">
+        <div><b>ID: </b> {{char.id}} <b>- Nome: </b>{{char.name}}<b> - Estilo de luta: </b>{{char.style}}<b> - País: </b>{{char.country}}.</div>
+        <div class="button-container">
+          <button (click)="onDelete(char.id)" class="remove-button">Excluir</button>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<button type="button" (click)="OnClick()"> CLIQUE EM MIM </button>
-<div class="card shadow" *ngIf="checkVar">
-    <h2 class="card-header"> SÉLOKOMANO! </h2>
+<div style="text-align: center; margin-bottom: 10px;">
+  <button class="styled-button" type="button" (click)="OnClick()">Clique em mim!</button>
+</div>
+
+<div class="card shadow custom-card" *ngIf="checkVar">
+  <h2 class="card-header custom-card-header">Disciplina</h2>
+  <div class="card-body custom-card-body">
+    <h2 class="card-header content">Tecnologias Web</h2>
+  </div>
 </div>

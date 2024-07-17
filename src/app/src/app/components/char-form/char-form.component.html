@@ -1,14 +1,42 @@
-<div class="card shadow text-center mb-5">
-    <div class="card-header bg-primary text-light">
-        <h4>ADD CHAR</h4>
-    </div>
-    <div class="card-body">
-        <form #addChar="ngForm" (submit)="onSubmit()">
+<div class="card shadow custom-card">
+    <h2 class="card-header custom-card-header title">Adicionar personagem</h2>
+    <div class="card-body custom-card-body">
+        <form #addChar="ngForm" (submit)="onSubmit(addChar)" style="text-align: center;">
             <div class="form-group">
-                <input type="text" name="char" class="form-control" placeholder="Add Char . . ." [(ngModel)]="char" required>
+                <label for="name">Nome:</label>
+                <input id="name" type="text" name="name" class="form-control finput" [(ngModel)]="name" #nameInput="ngModel" required>
+                <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error-message">
+                    Nome é obrigatório.
+                </div>
             </div>
-            <button class="btn btn-primary" [disabled]="addChar.invalid"> ADD </button>
+            <div class="form-group">
+                <label for="style">Estilo de luta:</label>
+                <input id="style" type="text" name="style" class="form-control finput" [(ngModel)]="style" #styleInput="ngModel" required>
+                <div *ngIf="styleInput.invalid && (styleInput.dirty || styleInput.touched)" class="error-message">
+                    Estilo de luta é obrigatório.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country">País:</label>
+                <input id="country" type="text" name="country" class="form-control finput" [(ngModel)]="country" #countryInput="ngModel" required>
+                <div *ngIf="countryInput.invalid && (countryInput.dirty || countryInput.touched)" class="error-message">
+                    País é obrigatório.
+                </div>
+            </div>
+            <div class="text-align: center;">
+                <button type="submit" [disabled]="!name || !style || !country" class="styled-button">Adicionar</button>
+            </div>
         </form>
-    <div>Preview: {{char}}</div>
+    </div>
 </div>
 
+<div class="card shadow custom-card">
+    <h2 class="card-header custom-card-header title">Preview</h2>
+    <div class="card-body custom-card-body">
+        <ul class="list-group">
+            <li class="list-group-item custom-list-item">
+            <b>Nome: </b>{{name}}<b> - Estilo de luta: </b>{{style}}<b> - País: </b>{{country}}.
+            </li>
+        </ul>
+    </div>
+</div>

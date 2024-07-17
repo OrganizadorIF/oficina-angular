@@ -1,0 +1,84 @@
+.custom-card {
+    max-width: 750px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+.custom-card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+  
+.custom-card-body {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+}
+  
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+  
+.form-control {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+  
+.styled-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px 0px 10px 0px;
+    width: 30%;
+}
+  
+.styled-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+  
+.styled-button:active {
+    background-color: #1e7e34;
+    transform: scale(1);
+}
+  
+.title {
+    text-align: center;
+}
+
+.finput {
+    width: 60%;
+}
+
+.styled-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: cursive;
+}

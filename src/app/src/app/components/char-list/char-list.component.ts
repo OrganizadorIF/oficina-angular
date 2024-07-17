@@ -17,15 +17,19 @@ export class CharListComponent {
   ) { }
 
   OnClick() {
-    console.log(this.checkVar);
     if(this.checkVar == false) {
-      this.toastr.success('Blink!')
+      this.toastr.success('Conteúdo visível!')
       this.checkVar = true;
     }
     else {
-      this.toastr.warning('Katiau!')
+      this.toastr.warning('Conteúdo escondido!')
       this.checkVar = false;
     }
+  }
+
+  onDelete(id: number): void {
+    this.CharsService.removeChar(id);
+    this.toastr.success('Personagem excluído com sucesso!');
   }
 
 }
