@@ -1,0 +1,13 @@
+<div class="card shadow">
+    <h2 class="card-header">My Char List</h2>
+    <div class="card-body">
+        <ul class="list-group" *ngFor="let char of CharsService.charList">
+            <b>ID:</b> {{char.id}} | <b>Nome:</b> {{char.name}} | <b>Cor favorita:</b> {{char.fav_color}} | <b>Número de armas:</b> {{char.weaponsNum}}.
+        </ul>
+    </div>
+</div>
+
+<button type="button" (click)="OnClick()"> CLIQUE EM MIM </button>
+<div class="card shadow" *ngIf="checkVar">
+    <h2 class="card-header"> SÉLOKOMANO! </h2>
+</div>

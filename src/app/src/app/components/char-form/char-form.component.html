@@ -1,0 +1,14 @@
+<div class="card shadow text-center mb-5">
+    <div class="card-header bg-primary text-light">
+        <h4>ADD CHAR</h4>
+    </div>
+    <div class="card-body">
+        <form #addChar="ngForm" (submit)="onSubmit()">
+            <div class="form-group">
+                <input type="text" name="char" class="form-control" placeholder="Add Char . . ." [(ngModel)]="char" required>
+            </div>
+            <button class="btn btn-primary" [disabled]="addChar.invalid"> ADD </button>
+        </form>
+    <div>Preview: {{char}}</div>
+</div>
+
