@@ -3,4 +3,7 @@ export interface Chars {
     name: string;
     style: string;
     country: string;
+    cpf: string;
+    cep: string;
+    city: string;
 }

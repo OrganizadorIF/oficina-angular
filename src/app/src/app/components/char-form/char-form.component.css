@@ -82,3 +82,14 @@
     font-weight: bold;
     font-family: cursive;
 }
+
+p-inputMask  {
+    display: contents;
+}
+
+:host ::ng-deep .p-inputtext {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 60%;
+}

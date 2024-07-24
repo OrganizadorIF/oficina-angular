@@ -1,9 +1,10 @@
 <div class="card shadow custom-card">
   <h2 class="card-header custom-card-header">Lista de Personagens</h2>
   <div class="card-body custom-card-body">
-    <ul class="list-group" *ngFor="let char of CharsService.charList">
-      <li class="list-group-item custom-list-item">
-        <div><b>ID: </b> {{char.id}} <b>- Nome: </b>{{char.name}}<b> - Estilo de luta: </b>{{char.style}}<b> - País: </b>{{char.country}}.</div>
+    <ul class="list-group test" *ngFor="let char of CharsService.charList">
+      <li class="list-group-item custom-list-item teste">
+        <div style="margin-bottom: 10px;"><b>ID: </b> {{char.id}} <b>- Nome: </b>{{char.name}}<b> - Estilo de luta: </b>{{char.style}}<b> - País: </b>{{char.country}}.</div>
+        <div style="margin-left: 50px;"><b>CEP: </b> {{char.cep}} <b>- Cidade: </b>{{char.city}}</div>
         <div class="button-container">
           <button (click)="onDelete(char.id)" class="remove-button">Excluir</button>
         </div>
